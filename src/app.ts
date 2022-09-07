@@ -10,7 +10,7 @@ dotenv.config();
 
 export  const bot = new Bot(`${process.env.BOT_TOKEN}`);
 // invoking menues
-bot.use(mainMenu)
+
 
 // Commands
 bot.command("info", onCommandInfo) 
