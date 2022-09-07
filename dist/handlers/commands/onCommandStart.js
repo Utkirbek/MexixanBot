@@ -12,6 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.onCommandStart = void 0;
 const mainMenu_1 = require("../../menus/mainMenu");
 const onCommandStart = (ctx) => __awaiter(void 0, void 0, void 0, function* () {
-    yield ctx.reply("Check out this menu:", { reply_markup: mainMenu_1.mainMenu });
+    yield ctx.replyWithVideo("BAACAgQAAxkBAAMaYxhP8VrBqt9e-CQdWzvPIa8uCooAAh0DAALZ7DxSPbbGMQ2IDl0pBA", { caption: "Welcome to the bot, please select a menu from the below buttons", reply_markup: mainMenu_1.mainMenu });
 });
 exports.onCommandStart = onCommandStart;

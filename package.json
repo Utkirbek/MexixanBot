@@ -16,8 +16,8 @@
     "rimraf": "^3.0.2"
   },
   "scripts": {
-    "dev": "ts-node ./src/app.ts",
-    "start": "nodemon",
+    "dev": "nodemon",
+    "start": "node ./dist/app.js",
     "build": "rimraf ./build && tsc"
   },
   "engines": {

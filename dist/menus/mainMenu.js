@@ -7,4 +7,10 @@ const onCommandHelp_1 = require("../handlers/commands/onCommandHelp");
 exports.mainMenu = new menu_1.Menu("main-menu")
     .text("Info", onCommandInfo_1.onCommandInfo)
     .row()
+    .text("Help", onCommandHelp_1.onCommandHelp)
+    .row()
+    .text("Help", onCommandHelp_1.onCommandHelp)
+    .row()
+    .text("Help", onCommandHelp_1.onCommandHelp)
+    .row()
     .text("Help", onCommandHelp_1.onCommandHelp);

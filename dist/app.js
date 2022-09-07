@@ -31,7 +31,7 @@ const onCommandHelp_1 = require("./handlers/commands/onCommandHelp");
 const mainMenu_1 = require("./menus/mainMenu");
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
-exports.bot = new grammy_1.Bot("5598638921:AAGH7Go0zodrSPv3OC98GNXR2qDE_J2Xwwc");
+exports.bot = new grammy_1.Bot(`${process.env.BOT_TOKEN}`);
 // invoking menues
 exports.bot.use(mainMenu_1.mainMenu);
 // Commands
