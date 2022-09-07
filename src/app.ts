@@ -25,18 +25,18 @@ bot.command("info", onCommandInfo)
 bot.command("help", onCommandHelp);
 
 const inlineKeyboard = new InlineKeyboard()
-  .text("Working Hours", "working-hours").row()
-  .url("Connect with Admin", "https://t.me/jakhongirabdukhamidov")
+  .url("מדריך למשתמש 👨‍🏫", "https://t.me/jakhongirabdukhamidov")
   .row()
   .url(
-    "Our Menu",
+    "תפריט 📃",
     "https://drive.google.com/file/d/1K_SessS8Dx7nQP1DaDYiBSma1ZzG84ia/view"
   )
   .row()
-  
-  .url("Connect with Owner", "https://t.me/jakhongirabdukhamidov")
+  .text("שעות פעילות ⏰", "working-hours")
   .row()
-  .url("Connect with Owner", "https://t.me/jakhongirabdukhamidov");
+  .url("עמוד רשמי ™️", "https://t.me/jakhongirabdukhamidov")
+  .row()
+  .url("שירות לקוחות 👩‍💻", "https://t.me/jakhongirabdukhamidov");
 
 // Send a keyboard along with a message.
 bot.command("start", async (ctx) => {
@@ -44,7 +44,9 @@ bot.command("start", async (ctx) => {
       "BAACAgQAAxkBAAMaYxhP8VrBqt9e-CQdWzvPIa8uCooAAh0DAALZ7DxSPbbGMQ2IDl0pBA",
       {
         caption:
-          "Welcome to the bot, please select a menu from the below buttons",
+          `ברוכים הבאים ל-™The Kosher Plug
+שירות משלוחי קנאביס 
+בלוס אנג׳לס 🚚`,
         reply_markup: inlineKeyboard,
       }
     );
