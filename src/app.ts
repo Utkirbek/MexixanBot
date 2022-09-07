@@ -8,7 +8,7 @@ import * as dotenv from "dotenv";
 
 dotenv.config();
 
-export  const bot = new Bot("5598638921:AAGH7Go0zodrSPv3OC98GNXR2qDE_J2Xwwc"); 
+export  const bot = new Bot(`${process.env.BOT_TOKEN}`);
 // invoking menues
 bot.use(mainMenu)
 
@@ -16,6 +16,7 @@ bot.use(mainMenu)
 bot.command("info", onCommandInfo) 
 bot.command("start", onCommandStart);
 bot.command("help", onCommandHelp);
+
 
 // starting bot
 bot.start();
