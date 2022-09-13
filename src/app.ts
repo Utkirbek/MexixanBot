@@ -20,6 +20,9 @@ export  const bot = new Bot<MyAppContext>(`${process.env.BOT_TOKEN}`);
 
 
 // // Commands
+
+
+
 bot.command("info", onCommandInfo) 
 
 bot.command("help", onCommandHelp);
@@ -41,10 +44,9 @@ const inlineKeyboard = new InlineKeyboard()
 // Send a keyboard along with a message.
 bot.command("start", async (ctx) => {
     await ctx.replyWithVideo(
-      "BAACAgQAAxkBAAMaYxhP8VrBqt9e-CQdWzvPIa8uCooAAh0DAALZ7DxSPbbGMQ2IDl0pBA",
+      "BAACAgIAAxkBAAM1YyDxDHuqPpFd9HBu8zpgrdNIQ3cAArIjAAIJlghJJ_GGAAFObVgfKQQ",
       {
-        caption:
-          `ברוכים הבאים ל-™The Kosher Plug
+        caption: `ברוכים הבאים ל-™The Kosher Plug
 שירות משלוחי קנאביס 
 בלוס אנג׳לס 🚚`,
         reply_markup: inlineKeyboard,
