@@ -44,18 +44,21 @@ exports.bot = new grammy_1.Bot(`${process.env.BOT_TOKEN}`);
 exports.bot.command("info", onCommandInfo_1.onCommandInfo);
 exports.bot.command("help", onCommandHelp_1.onCommandHelp);
 const inlineKeyboard = new grammy_1.InlineKeyboard()
-    .text("Working Hours", "working-hours").row()
-    .url("Connect with Admin", "https://t.me/jakhongirabdukhamidov")
+    .url("מדריך למשתמש 👨‍🏫", "https://t.me/jakhongirabdukhamidov")
     .row()
-    .url("Our Menu", "https://drive.google.com/file/d/1K_SessS8Dx7nQP1DaDYiBSma1ZzG84ia/view")
+    .url("תפריט 📃", "https://drive.google.com/file/d/1K_SessS8Dx7nQP1DaDYiBSma1ZzG84ia/view")
     .row()
-    .url("Connect with Owner", "https://t.me/jakhongirabdukhamidov")
+    .text("שעות פעילות ⏰", "working-hours")
     .row()
-    .url("Connect with Owner", "https://t.me/jakhongirabdukhamidov");
+    .url("עמוד רשמי ™️", "https://t.me/jakhongirabdukhamidov")
+    .row()
+    .url("שירות לקוחות 👩‍💻", "https://t.me/jakhongirabdukhamidov");
 // Send a keyboard along with a message.
 exports.bot.command("start", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
     yield ctx.replyWithVideo("BAACAgQAAxkBAAMaYxhP8VrBqt9e-CQdWzvPIa8uCooAAh0DAALZ7DxSPbbGMQ2IDl0pBA", {
-        caption: "Welcome to the bot, please select a menu from the below buttons",
+        caption: `ברוכים הבאים ל-™The Kosher Plug
+שירות משלוחי קנאביס 
+בלוס אנג׳לס 🚚`,
         reply_markup: inlineKeyboard,
     });
 }));
