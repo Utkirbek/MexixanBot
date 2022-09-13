@@ -55,7 +55,7 @@ const inlineKeyboard = new grammy_1.InlineKeyboard()
     .url("שירות לקוחות 👩‍💻", "https://t.me/jakhongirabdukhamidov");
 // Send a keyboard along with a message.
 exports.bot.command("start", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
-    yield ctx.replyWithVideo("BAACAgQAAxkBAAMaYxhP8VrBqt9e-CQdWzvPIa8uCooAAh0DAALZ7DxSPbbGMQ2IDl0pBA", {
+    yield ctx.replyWithVideo("BAACAgIAAxkBAAM1YyDxDHuqPpFd9HBu8zpgrdNIQ3cAArIjAAIJlghJJ_GGAAFObVgfKQQ", {
         caption: `ברוכים הבאים ל-™The Kosher Plug
 שירות משלוחי קנאביס 
 בלוס אנג׳לס 🚚`,
