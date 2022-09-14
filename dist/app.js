@@ -50,7 +50,7 @@ const inlineKeyboard = new grammy_1.InlineKeyboard()
     .row()
     .text("שעות פעילות ⏰", "working-hours")
     .row()
-    .url("עמוד רשמי ™️", "https://t.me/jakhongirabdukhamidov")
+    .url("עמוד רשמי ™️", "https://t.me/+5ukDOLDvYKI2ZGEx")
     .row()
     .url("שירות לקוחות 👩‍💻", "https://t.me/jakhongirabdukhamidov");
 // Send a keyboard along with a message.
@@ -65,7 +65,14 @@ exports.bot.command("start", (ctx) => __awaiter(void 0, void 0, void 0, function
 // Wait for click events with specific callback data.
 exports.bot.callbackQuery("working-hours", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
     yield ctx.answerCallbackQuery({
-        text: "We open from 10:00 to 22:00 on weekdays and from 10:00 to 23:00 on weekends",
+        text: `שעות פעילות
+
+א׳-ה׳   10:00-0:00
+ו׳           10:00-18:00
+מוצ״ש    10:00-2:00
+
+⛔️לא עובדים בשבתות 
+וחגי ישראל⛔️`,
         show_alert: true,
     });
 }));

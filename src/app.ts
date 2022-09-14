@@ -37,7 +37,7 @@ const inlineKeyboard = new InlineKeyboard()
   .row()
   .text("שעות פעילות ⏰", "working-hours")
   .row()
-  .url("עמוד רשמי ™️", "https://t.me/jakhongirabdukhamidov")
+  .url("עמוד רשמי ™️", "https://t.me/+5ukDOLDvYKI2ZGEx")
   .row()
   .url("שירות לקוחות 👩‍💻", "https://t.me/jakhongirabdukhamidov");
 
@@ -58,8 +58,15 @@ bot.command("start", async (ctx) => {
 // Wait for click events with specific callback data.
 bot.callbackQuery("working-hours", async (ctx) => {
   await ctx.answerCallbackQuery({
-    text: "We open from 10:00 to 22:00 on weekdays and from 10:00 to 23:00 on weekends",
-    show_alert : true,
+    text: `שעות פעילות
+
+א׳-ה׳   10:00-0:00
+ו׳           10:00-18:00
+מוצ״ש    10:00-2:00
+
+⛔️לא עובדים בשבתות 
+וחגי ישראל⛔️`,
+    show_alert: true,
   });
 });
 
