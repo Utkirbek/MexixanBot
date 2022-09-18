@@ -28,18 +28,14 @@ bot.command("info", onCommandInfo)
 bot.command("help", onCommandHelp);
 
 const inlineKeyboard = new InlineKeyboard()
-  .url("מדריך למשתמש 👨‍🏫", "https://t.me/jakhongirabdukhamidov")
-  .row()
-  .url(
-    "תפריט 📃",
-    "https://drive.google.com/file/d/1K_SessS8Dx7nQP1DaDYiBSma1ZzG84ia/view"
-  )
+
+  .url("תפריט 📃", "http://Kosherplugmenu.com")
   .row()
   .text("שעות פעילות ⏰", "working-hours")
   .row()
   .url("עמוד רשמי ™️", "https://t.me/+5ukDOLDvYKI2ZGEx")
   .row()
-  .url("שירות לקוחות 👩‍💻", "https://t.me/jakhongirabdukhamidov");
+  .url("שירות לקוחות 👩‍💻", "https://t.me/thekosherplugcs");
 
 // Send a keyboard along with a message.
 bot.command("start", async (ctx) => {
