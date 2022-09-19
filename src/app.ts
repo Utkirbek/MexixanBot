@@ -28,7 +28,8 @@ bot.command("info", onCommandInfo)
 bot.command("help", onCommandHelp);
 
 const inlineKeyboard = new InlineKeyboard()
-
+  .url("‘Shop’ חנות 🏪", "https://kosherplug.vercel.app/")
+  .row()
   .url("תפריט 📃", "http://Kosherplugmenu.com")
   .row()
   .text("שעות פעילות ⏰", "working-hours")
