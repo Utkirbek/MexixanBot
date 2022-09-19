@@ -17,8 +17,8 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "start": "node ./dist/app.js",
-    "build": "rimraf ./build && tsc"
+    "start": "rimraf ./build && tsc && node ./dist/app.js",
+    "build": "rimraf ./build && tsc && node ./dist/app.js"
   },
   "engines": {
     "node": "17.0",
