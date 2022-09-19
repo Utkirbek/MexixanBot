@@ -44,15 +44,13 @@ exports.bot = new grammy_1.Bot(`${process.env.BOT_TOKEN}`);
 exports.bot.command("info", onCommandInfo_1.onCommandInfo);
 exports.bot.command("help", onCommandHelp_1.onCommandHelp);
 const inlineKeyboard = new grammy_1.InlineKeyboard()
-    .url("מדריך למשתמש 👨‍🏫", "https://t.me/jakhongirabdukhamidov")
-    .row()
-    .url("תפריט 📃", "https://drive.google.com/file/d/1K_SessS8Dx7nQP1DaDYiBSma1ZzG84ia/view")
+    .url("תפריט 📃", "http://Kosherplugmenu.com")
     .row()
     .text("שעות פעילות ⏰", "working-hours")
     .row()
     .url("עמוד רשמי ™️", "https://t.me/+5ukDOLDvYKI2ZGEx")
     .row()
-    .url("שירות לקוחות 👩‍💻", "https://t.me/jakhongirabdukhamidov");
+    .url("שירות לקוחות 👩‍💻", "https://t.me/thekosherplugcs");
 // Send a keyboard along with a message.
 exports.bot.command("start", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
     yield ctx.replyWithVideo("BAACAgIAAxkBAAM1YyDxDHuqPpFd9HBu8zpgrdNIQ3cAArIjAAIJlghJJ_GGAAFObVgfKQQ", {
