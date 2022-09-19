@@ -44,7 +44,7 @@ exports.bot = new grammy_1.Bot(`${process.env.BOT_TOKEN}`);
 exports.bot.command("info", onCommandInfo_1.onCommandInfo);
 exports.bot.command("help", onCommandHelp_1.onCommandHelp);
 const inlineKeyboard = new grammy_1.InlineKeyboard()
-    .webApp("‘Shop’ חנות 🏪", "https://kosherplug.vercel.app/")
+    .webApp("חנות 🏪", "https://kosherplug.vercel.app/")
     .row()
     .url("תפריט 📃", "http://Kosherplugmenu.com")
     .row()
