@@ -3,7 +3,7 @@ import { Bot, CallbackQueryContext, Context, InlineKeyboard } from "grammy";
 import { onCommandInfo } from "./handlers/commands/onCommandInfo";
 
 import { onCommandHelp } from "./handlers/commands/onCommandHelp";
-
+import axios from "axios";
 import * as dotenv from "dotenv";
 
 
@@ -22,9 +22,14 @@ export  const bot = new Bot<MyAppContext>(`${process.env.BOT_TOKEN}`);
 // // Commands
 
 
+bot.on("message:contact", async (ctx) => {
+    const URL = `https://kosherplugback.eu-4.evennode.com/api/user/update/${ctx.message.contact.phone_number}/${ctx.from.id}`;
+    const response = await axios.get(URL);
+  console.log(response);
+  await ctx.reply("Thank you!");
+});
 
 bot.command("info", onCommandInfo) 
-
 bot.command("help", onCommandHelp);
 
 const inlineKeyboard = new InlineKeyboard()

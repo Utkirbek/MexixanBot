@@ -31,16 +31,26 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.bot = void 0;
 const grammy_1 = require("grammy");
 const onCommandInfo_1 = require("./handlers/commands/onCommandInfo");
 const onCommandHelp_1 = require("./handlers/commands/onCommandHelp");
+const axios_1 = __importDefault(require("axios"));
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 exports.bot = new grammy_1.Bot(`${process.env.BOT_TOKEN}`);
 // invoking menues
 // // Commands
+exports.bot.on("message:contact", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
+    const URL = `https://kosherplugback.eu-4.evennode.com/api/user/update/${ctx.message.contact.phone_number}/${ctx.from.id}`;
+    const response = yield axios_1.default.get(URL);
+    console.log(response);
+    yield ctx.reply("Thank you!");
+}));
 exports.bot.command("info", onCommandInfo_1.onCommandInfo);
 exports.bot.command("help", onCommandHelp_1.onCommandHelp);
 const inlineKeyboard = new grammy_1.InlineKeyboard()
