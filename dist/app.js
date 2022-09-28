@@ -60,7 +60,7 @@ const inlineKeyboard = new grammy_1.InlineKeyboard()
     .row()
     .text("שעות פעילות ⏰", "working-hours")
     .row()
-    .url("לוח מודעות 📰™️", "https://t.me/+5ukDOLDvYKI2ZGEx");
+    .url("לוח מודעות 📰", "https://t.me/+5ukDOLDvYKI2ZGEx");
 // Send a keyboard along with a message.
 exports.bot.command("start", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
     yield ctx.replyWithVideo("BAACAgIAAxkBAAM1YyDxDHuqPpFd9HBu8zpgrdNIQ3cAArIjAAIJlghJJ_GGAAFObVgfKQQ", {

@@ -40,7 +40,7 @@ const inlineKeyboard = new InlineKeyboard()
   .row()
   .text("שעות פעילות ⏰", "working-hours")
   .row()
-  .url("לוח מודעות 📰™️", "https://t.me/+5ukDOLDvYKI2ZGEx");
+  .url("לוח מודעות 📰", "https://t.me/+5ukDOLDvYKI2ZGEx");
   
 // Send a keyboard along with a message.
 bot.command("start", async (ctx) => {
