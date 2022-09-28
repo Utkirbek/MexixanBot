@@ -54,15 +54,13 @@ exports.bot.on("message:contact", (ctx) => __awaiter(void 0, void 0, void 0, fun
 exports.bot.command("info", onCommandInfo_1.onCommandInfo);
 exports.bot.command("help", onCommandHelp_1.onCommandHelp);
 const inlineKeyboard = new grammy_1.InlineKeyboard()
-    .webApp("חנות 🏪", "https://kosherplug.vercel.app/")
+    .url("הזמנה מנציג | שירות לקוחות 👩‍💻", "https://t.me/thekosherplugcs")
     .row()
     .url("תפריט 📃", "http://Kosherplugmenu.com")
     .row()
     .text("שעות פעילות ⏰", "working-hours")
     .row()
-    .url("עמוד רשמי ™️", "https://t.me/+5ukDOLDvYKI2ZGEx")
-    .row()
-    .url("שירות לקוחות 👩‍💻", "https://t.me/thekosherplugcs");
+    .url("לוח מודעות 📰™️", "https://t.me/+5ukDOLDvYKI2ZGEx");
 // Send a keyboard along with a message.
 exports.bot.command("start", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
     yield ctx.replyWithVideo("BAACAgIAAxkBAAM1YyDxDHuqPpFd9HBu8zpgrdNIQ3cAArIjAAIJlghJJ_GGAAFObVgfKQQ", {

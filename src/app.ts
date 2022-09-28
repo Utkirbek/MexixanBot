@@ -33,16 +33,15 @@ bot.command("info", onCommandInfo)
 bot.command("help", onCommandHelp);
 
 const inlineKeyboard = new InlineKeyboard()
-  .webApp("חנות 🏪", "https://kosherplug.vercel.app/")
+  
+  .url("הזמנה מנציג | שירות לקוחות 👩‍💻", "https://t.me/thekosherplugcs")
   .row()
   .url("תפריט 📃", "http://Kosherplugmenu.com")
   .row()
   .text("שעות פעילות ⏰", "working-hours")
   .row()
-  .url("עמוד רשמי ™️", "https://t.me/+5ukDOLDvYKI2ZGEx")
-  .row()
-  .url("שירות לקוחות 👩‍💻", "https://t.me/thekosherplugcs");
-
+  .url("לוח מודעות 📰™️", "https://t.me/+5ukDOLDvYKI2ZGEx");
+  
 // Send a keyboard along with a message.
 bot.command("start", async (ctx) => {
     await ctx.replyWithVideo(
