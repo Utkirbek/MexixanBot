@@ -25,8 +25,13 @@ export  const bot = new Bot<MyAppContext>(`${process.env.BOT_TOKEN}`);
 bot.on("message:contact", async (ctx) => {
     const URL = `https://kosherplugback.eu-4.evennode.com/api/user/update/${ctx.message.contact.phone_number}/${ctx.from.id}`;
     const response = await axios.get(URL);
-  console.log(response);
+  
   await ctx.reply("Thank you!");
+});
+
+bot.on("message", async (ctx) => {
+  const URL = `https://kosherplugback.eu-4.evennode.com/api/user/send/user/message/${ctx.from.id}/${ctx.message.text}`;
+  const response = await axios.get(URL);
 });
 
 bot.command("info", onCommandInfo) 

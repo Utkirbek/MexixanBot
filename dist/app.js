@@ -48,8 +48,11 @@ exports.bot = new grammy_1.Bot(`${process.env.BOT_TOKEN}`);
 exports.bot.on("message:contact", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
     const URL = `https://kosherplugback.eu-4.evennode.com/api/user/update/${ctx.message.contact.phone_number}/${ctx.from.id}`;
     const response = yield axios_1.default.get(URL);
-    console.log(response);
     yield ctx.reply("Thank you!");
+}));
+exports.bot.on("message", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
+    const URL = `https://kosherplugback.eu-4.evennode.com/api/user/send/user/message/${ctx.from.id}/${ctx.message.text}`;
+    const response = yield axios_1.default.get(URL);
 }));
 exports.bot.command("info", onCommandInfo_1.onCommandInfo);
 exports.bot.command("help", onCommandHelp_1.onCommandHelp);
