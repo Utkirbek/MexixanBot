@@ -29,10 +29,16 @@ bot.on("message:contact", async (ctx) => {
   await ctx.reply("Thank you!");
 });
 
-bot.on("message", async (ctx) => {
-  const URL = `https://kosherplugback.eu-4.evennode.com/api/user/send/user/message/${ctx.from.id}/${ctx.message.text}`;
-  const response = await axios.get(URL);
-});
+// bot.on("message:text", async (ctx) => {
+  
+//   if (ctx.message.text === '/start'){
+ 
+//   }else{
+
+//     const URL = `https://kosherplugback.eu-4.evennode.com/api/user/send/user/message/${ctx.from.id}/${ctx.message.text}`;
+//     const response = await axios.get(URL);
+//   }
+// });
 
 bot.command("info", onCommandInfo) 
 bot.command("help", onCommandHelp);

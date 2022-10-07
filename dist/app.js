@@ -50,10 +50,13 @@ exports.bot.on("message:contact", (ctx) => __awaiter(void 0, void 0, void 0, fun
     const response = yield axios_1.default.get(URL);
     yield ctx.reply("Thank you!");
 }));
-exports.bot.on("message", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
-    const URL = `https://kosherplugback.eu-4.evennode.com/api/user/send/user/message/${ctx.from.id}/${ctx.message.text}`;
-    const response = yield axios_1.default.get(URL);
-}));
+// bot.on("message:text", async (ctx) => {
+//   if (ctx.message.text === '/start'){
+//   }else{
+//     const URL = `https://kosherplugback.eu-4.evennode.com/api/user/send/user/message/${ctx.from.id}/${ctx.message.text}`;
+//     const response = await axios.get(URL);
+//   }
+// });
 exports.bot.command("info", onCommandInfo_1.onCommandInfo);
 exports.bot.command("help", onCommandHelp_1.onCommandHelp);
 const inlineKeyboard = new grammy_1.InlineKeyboard()
