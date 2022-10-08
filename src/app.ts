@@ -29,16 +29,7 @@ bot.on("message:contact", async (ctx) => {
   await ctx.reply("Thank you!");
 });
 
-// bot.on("message:text", async (ctx) => {
-  
-//   if (ctx.message.text === '/start'){
- 
-//   }else{
 
-//     const URL = `https://kosherplugback.eu-4.evennode.com/api/user/send/user/message/${ctx.from.id}/${ctx.message.text}`;
-//     const response = await axios.get(URL);
-//   }
-// });
 
 bot.command("info", onCommandInfo) 
 bot.command("help", onCommandHelp);
@@ -56,7 +47,7 @@ const inlineKeyboard = new InlineKeyboard()
 // Send a keyboard along with a message.
 bot.command("start", async (ctx) => {
     await ctx.replyWithVideo(
-      "BAACAgIAAxkBAAM1YyDxDHuqPpFd9HBu8zpgrdNIQ3cAArIjAAIJlghJJ_GGAAFObVgfKQQ",
+      "BAACAgIAAxkBAAIBDmNBLdWuKy7nh71_ipC2CIfMpj5SAAKoHgAC4GwISnuJFU6_cT8EKgQ",
       {
         caption: `ברוכים הבאים ל-™The Kosher Plug
 שירות משלוחי קנאביס 
@@ -80,6 +71,19 @@ bot.callbackQuery("working-hours", async (ctx) => {
 וחגי ישראל⛔️`,
     show_alert: true,
   });
+});
+
+bot.on("message:text", async (ctx) => {
+
+  
+  
+  
+
+    const URL = `https://kosherplugback.eu-4.evennode.com/api/user/send/user/message/${ctx.from.id}/${ctx.message.text}`;
+    
+    
+       const response = await axios.get(URL);
+  
 });
 
 // starting bot
